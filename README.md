@@ -4,7 +4,7 @@ It allows you to use string aliases in your codebase instead of using the actual
 This makes it much easier to find and edit the strings themselves.
 
 ## Installation
-```composer require codelight/babelfish```
+```composer require codelight/babelfish ^1.0```
 
 ## Usage
 Register aliases and corresponding strings:
