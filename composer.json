@@ -1,0 +1,15 @@
+{
+  "name": "codelight/babelfish",
+  "type": "package",
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Codelight\\BabelFish\\": "src/"
+    },
+    "files": [
+      "helpers.php"
+    ]
+  }
+}
