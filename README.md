@@ -7,10 +7,14 @@ This makes it much easier to find and edit the strings themselves.
 ```composer require codelight/babelfish ^1.0```
 
 ## Usage
-Register aliases and corresponding strings:
+In your functions.php
 ```php
 <?php
 
+// Load theme textdomain
+load_theme_textdomain('your_text_domain', get_stylesheet_directory());
+
+// Register aliases and corresponding strings:
 babelfish()->register([
     'button.payment' => __('Complete payment',     'your_text_domain'),
     'button.cta'     => __('Buy now for only %s!', 'your_text_domain'),
