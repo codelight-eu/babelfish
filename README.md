@@ -12,7 +12,9 @@ In your functions.php
 <?php
 
 // Load theme textdomain
-load_theme_textdomain('your_text_domain', get_stylesheet_directory());
+add_action('after_setup_theme', function() {
+    load_theme_textdomain('your_text_domain', get_stylesheet_directory());
+});
 
 // Register aliases and corresponding strings:
 babelfish()->register([
