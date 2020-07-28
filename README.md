@@ -11,16 +11,15 @@ In your functions.php
 ```php
 <?php
 
-// Load theme textdomain
 add_action('after_setup_theme', function() {
     load_theme_textdomain('your_text_domain', get_stylesheet_directory());
+    
+    // Register aliases and corresponding strings:
+    babelfish()->register([
+        'button.payment' => __('Complete payment',     'your_text_domain'),
+        'button.cta'     => __('Buy now for only %s!', 'your_text_domain'),
+    ]);
 });
-
-// Register aliases and corresponding strings:
-babelfish()->register([
-    'button.payment' => __('Complete payment',     'your_text_domain'),
-    'button.cta'     => __('Buy now for only %s!', 'your_text_domain'),
-]);
 ```
 
 Get the strings:
