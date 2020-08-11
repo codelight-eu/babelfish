@@ -3,6 +3,8 @@ Babelfish is a lightweight string registry package.
 It allows you to use string aliases in your codebase instead of using the actual strings.
 This makes it much easier to find and edit the strings themselves.
 
+In addition to that, if you're using Blade templates, you don't have to worry about gettext / poedit / wpml not being able to parse your templates properly.
+
 ## Installation
 ```composer require codelight/babelfish ^1.0```
 
