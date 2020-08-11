@@ -9,22 +9,21 @@ In addition to that, if you're using Blade templates, you don't have to worry ab
 ```composer require codelight/babelfish ^1.0```
 
 ## Usage
-In your functions.php
+In your `functions.php`:
 ```php
 <?php
 
-add_action('after_setup_theme', function() {
-    load_theme_textdomain('your_text_domain', get_stylesheet_directory());
-    
-    // Register aliases and corresponding strings:
-    babelfish()->register([
-        'button.payment' => __('Complete payment',     'your_text_domain'),
-        'button.cta'     => __('Buy now for only %s!', 'your_text_domain'),
-    ]);
-});
-```
+load_theme_textdomain('your_text_domain', get_stylesheet_directory());
 
-Get the strings:
+// Register aliases and corresponding strings:
+babelfish()->register([
+    'button.payment' => __('Complete payment',     'your_text_domain'),
+    'button.cta'     => __('Buy now for only %s!', 'your_text_domain'),
+]);
+```
+However, I recommend creating a separate file, e.g. `translations.php` which contains everything related to translations.
+
+To get the translations:
 ```php
 <button>
   <?php echo _t('button.payment'); // Complete payment! ?>
